@@ -1,0 +1,22 @@
+# Generated runtime files (NEVER commit these)
+clab-*/
+configs/
+*.clab.yml
+*.log
+*.pid
+*.json
+!package.json
+!package-lock.json
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
