@@ -6,7 +6,7 @@
       "prefix": "clab",
       "mgmt": {
         "network": "clab",
-        "bridge": "br-bdcc75902605",
+        "bridge": "br-601d6bdfc2b8",
         "ipv4-subnet": "172.20.20.0/24",
         "ipv4-gw": "172.20.20.1",
         "ipv6-subnet": "3fff:172:20:20::/64",
@@ -28,13 +28,15 @@
       "image": "alpine:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-address": "172.20.20.5",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-bdcc75902605",
+        "clab-git-branch": "feature/ansible-automation",
+        "clab-git-hash": "e0a0712",
+        "clab-mgmt-net-bridge": "br-601d6bdfc2b8",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/root/evpn-lab-auto/clab-evpn-lab-auto/client1",
@@ -59,13 +61,15 @@
       "image": "alpine:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-address": "172.20.20.3",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-bdcc75902605",
+        "clab-git-branch": "feature/ansible-automation",
+        "clab-git-hash": "e0a0712",
+        "clab-mgmt-net-bridge": "br-601d6bdfc2b8",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/root/evpn-lab-auto/clab-evpn-lab-auto/client2",
@@ -90,13 +94,15 @@
       "image": "alpine:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-address": "172.20.20.4",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::9",
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-bdcc75902605",
+        "clab-git-branch": "feature/ansible-automation",
+        "clab-git-hash": "e0a0712",
+        "clab-mgmt-net-bridge": "br-601d6bdfc2b8",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/root/evpn-lab-auto/clab-evpn-lab-auto/client3",
@@ -121,13 +127,15 @@
       "image": "quay.io/frrouting/frr:10.1.1",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-address": "172.20.20.6",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-bdcc75902605",
+        "clab-git-branch": "feature/ansible-automation",
+        "clab-git-hash": "e0a0712",
+        "clab-mgmt-net-bridge": "br-601d6bdfc2b8",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/root/evpn-lab-auto/clab-evpn-lab-auto/leaf1",
@@ -152,13 +160,15 @@
       "image": "quay.io/frrouting/frr:10.1.1",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.8",
+      "mgmt-ipv4-address": "172.20.20.7",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::8",
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-bdcc75902605",
+        "clab-git-branch": "feature/ansible-automation",
+        "clab-git-hash": "e0a0712",
+        "clab-mgmt-net-bridge": "br-601d6bdfc2b8",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/root/evpn-lab-auto/clab-evpn-lab-auto/leaf2",
@@ -183,13 +193,15 @@
       "image": "quay.io/frrouting/frr:10.1.1",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-address": "172.20.20.2",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-bdcc75902605",
+        "clab-git-branch": "feature/ansible-automation",
+        "clab-git-hash": "e0a0712",
+        "clab-mgmt-net-bridge": "br-601d6bdfc2b8",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/root/evpn-lab-auto/clab-evpn-lab-auto/leaf3",
@@ -214,13 +226,15 @@
       "image": "quay.io/frrouting/frr:10.1.1",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-address": "172.20.20.9",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-address": "3fff:172:20:20::9",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-bdcc75902605",
+        "clab-git-branch": "feature/ansible-automation",
+        "clab-git-hash": "e0a0712",
+        "clab-mgmt-net-bridge": "br-601d6bdfc2b8",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/root/evpn-lab-auto/clab-evpn-lab-auto/spine1",
@@ -245,13 +259,15 @@
       "image": "quay.io/frrouting/frr:10.1.1",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-address": "172.20.20.8",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-address": "3fff:172:20:20::8",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-bdcc75902605",
+        "clab-git-branch": "feature/ansible-automation",
+        "clab-git-hash": "e0a0712",
+        "clab-mgmt-net-bridge": "br-601d6bdfc2b8",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/root/evpn-lab-auto/clab-evpn-lab-auto/spine2",
@@ -272,13 +288,13 @@
         "a": {
           "node": "leaf1",
           "interface": "eth1",
-          "mac": "aa:c1:ab:35:1e:f3",
+          "mac": "aa:c1:ab:2b:15:53",
           "peer": "z"
         },
         "z": {
           "node": "spine1",
           "interface": "eth1",
-          "mac": "aa:c1:ab:b7:f6:e4",
+          "mac": "aa:c1:ab:12:2f:d5",
           "peer": "a"
         }
       }
@@ -288,13 +304,13 @@
         "a": {
           "node": "leaf1",
           "interface": "eth2",
-          "mac": "aa:c1:ab:aa:e6:5a",
+          "mac": "aa:c1:ab:3d:43:14",
           "peer": "z"
         },
         "z": {
           "node": "spine2",
           "interface": "eth1",
-          "mac": "aa:c1:ab:9a:fe:6a",
+          "mac": "aa:c1:ab:a5:a5:01",
           "peer": "a"
         }
       }
@@ -304,13 +320,13 @@
         "a": {
           "node": "leaf2",
           "interface": "eth1",
-          "mac": "aa:c1:ab:5e:89:55",
+          "mac": "aa:c1:ab:78:16:50",
           "peer": "z"
         },
         "z": {
           "node": "spine1",
           "interface": "eth2",
-          "mac": "aa:c1:ab:d4:14:b5",
+          "mac": "aa:c1:ab:7d:86:18",
           "peer": "a"
         }
       }
@@ -320,13 +336,13 @@
         "a": {
           "node": "leaf2",
           "interface": "eth2",
-          "mac": "aa:c1:ab:c7:05:f2",
+          "mac": "aa:c1:ab:8b:c8:b0",
           "peer": "z"
         },
         "z": {
           "node": "spine2",
           "interface": "eth2",
-          "mac": "aa:c1:ab:06:8e:22",
+          "mac": "aa:c1:ab:9e:9a:b8",
           "peer": "a"
         }
       }
@@ -336,13 +352,13 @@
         "a": {
           "node": "leaf3",
           "interface": "eth1",
-          "mac": "aa:c1:ab:07:18:dd",
+          "mac": "aa:c1:ab:d8:43:eb",
           "peer": "z"
         },
         "z": {
           "node": "spine1",
           "interface": "eth3",
-          "mac": "aa:c1:ab:97:17:d5",
+          "mac": "aa:c1:ab:b5:49:2c",
           "peer": "a"
         }
       }
@@ -352,13 +368,13 @@
         "a": {
           "node": "leaf3",
           "interface": "eth2",
-          "mac": "aa:c1:ab:5f:58:7f",
+          "mac": "aa:c1:ab:fd:e8:90",
           "peer": "z"
         },
         "z": {
           "node": "spine2",
           "interface": "eth3",
-          "mac": "aa:c1:ab:e4:d2:9a",
+          "mac": "aa:c1:ab:e1:ea:a0",
           "peer": "a"
         }
       }
@@ -368,13 +384,13 @@
         "a": {
           "node": "client1",
           "interface": "eth1",
-          "mac": "aa:c1:ab:14:42:8f",
+          "mac": "aa:c1:ab:64:f4:ea",
           "peer": "z"
         },
         "z": {
           "node": "leaf1",
           "interface": "eth10",
-          "mac": "aa:c1:ab:26:ce:41",
+          "mac": "aa:c1:ab:4b:fa:43",
           "peer": "a"
         }
       }
@@ -384,13 +400,13 @@
         "a": {
           "node": "client2",
           "interface": "eth1",
-          "mac": "aa:c1:ab:34:cb:93",
+          "mac": "aa:c1:ab:e3:77:04",
           "peer": "z"
         },
         "z": {
           "node": "leaf2",
           "interface": "eth10",
-          "mac": "aa:c1:ab:40:9e:5c",
+          "mac": "aa:c1:ab:f2:ba:1f",
           "peer": "a"
         }
       }
@@ -400,13 +416,13 @@
         "a": {
           "node": "client3",
           "interface": "eth1",
-          "mac": "aa:c1:ab:87:43:ef",
+          "mac": "aa:c1:ab:8a:dc:62",
           "peer": "z"
         },
         "z": {
           "node": "leaf3",
           "interface": "eth10",
-          "mac": "aa:c1:ab:ab:d7:c3",
+          "mac": "aa:c1:ab:86:88:17",
           "peer": "a"
         }
       }

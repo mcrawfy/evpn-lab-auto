@@ -8,7 +8,7 @@ ip link set br10 up
 ip link add vxlan10010 type vxlan \
     id 10010 \
     dstport 4789 \
-    local 2.2.2.2 \
+    local {{ router_id }} \
     nolearning
 ip link set vxlan10010 master br10
 ip link set vxlan10010 up

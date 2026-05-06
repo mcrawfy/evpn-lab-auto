@@ -1,0 +1,64 @@
+all:
+  children:
+    spines:
+      hosts:
+        spine1:
+          ansible_host: spine1
+          router_id: 1.1.1.1
+          as_number: 65000
+          interfaces:
+            - name: eth1
+              ip: 10.0.1.1/30
+              peer: leaf1
+              peer_ip: 10.0.1.2
+            - name: eth2
+              ip: 10.0.3.1/30
+              peer: leaf2
+              peer_ip: 10.0.3.2
+            - name: eth3
+              ip: 10.0.5.1/30
+              peer: leaf3
+              peer_ip: 10.0.5.2
+        spine2:
+          ansible_host: spine2
+          router_id: 1.1.1.2
+          as_number: 65000
+          interfaces:
+            - name: eth1
+              ip: 10.0.2.1/30
+              peer: leaf1
+              peer_ip: 10.0.2.2
+            - name: eth2
+              ip: 10.0.4.1/30
+              peer: leaf2
+              peer_ip: 10.0.4.2
+            - name: eth3
+              ip: 10.0.6.1/30
+              peer: leaf3
+              peer_ip: 10.0.6.2
+    leaves:
+      hosts:
+        leaf1:
+          ansible_host: leaf1
+          router_id: 2.2.2.1
+          as_number: 65001
+          spine1_ip: 10.0.1.1
+          spine2_ip: 10.0.2.1
+          spine1_peer_ip: 10.0.1.2
+          spine2_peer_ip: 10.0.2.2
+        leaf2:
+          ansible_host: leaf2
+          router_id: 2.2.2.2
+          as_number: 65002
+          spine1_ip: 10.0.3.1
+          spine2_ip: 10.0.4.1
+          spine1_peer_ip: 10.0.3.2
+          spine2_peer_ip: 10.0.4.2
+        leaf3:
+          ansible_host: leaf3
+          router_id: 2.2.2.3
+          as_number: 65003
+          spine1_ip: 10.0.5.1
+          spine2_ip: 10.0.6.1
+          spine1_peer_ip: 10.0.5.2
+          spine2_peer_ip: 10.0.6.2

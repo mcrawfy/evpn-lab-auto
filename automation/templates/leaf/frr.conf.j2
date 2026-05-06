@@ -1,0 +1,52 @@
+hostname {{ ansible_host }}
+!
+log stdout
+!
+interface eth1
+ ip address {{ spine1_peer_ip }}/30
+ ip ospf network point-to-point
+ ip ospf area 0.0.0.0
+!
+interface eth2
+ ip address {{ spine2_peer_ip }}/30
+ ip ospf network point-to-point
+ ip ospf area 0.0.0.0
+!
+interface lo
+ ip address {{ router_id }}/32
+ ip ospf area 0.0.0.0
+!
+interface br10
+ bridge vxlan-vni 10010
+!
+interface vxlan10010
+ vxlan source-address {{ router_id }}
+ vxlan vni 10010
+ bridge-access br10
+!
+router ospf
+ ospf router-id {{ router_id }}
+ log-adjacency-changes
+!
+router bgp {{ as_number }}
+ bgp router-id {{ router_id }}
+ no bgp ebgp-requires-policy
+ !
+ neighbor {{ spine1_ip }} remote-as 65000
+ neighbor {{ spine2_ip }} remote-as 65000
+ !
+ address-family ipv4 unicast
+  neighbor {{ spine1_ip }} activate
+  neighbor {{ spine2_ip }} activate
+  network {{ router_id }}/32
+ exit-address-family
+ !
+ address-family l2vpn evpn
+  neighbor {{ spine1_ip }} activate
+  neighbor {{ spine2_ip }} activate
+  advertise-all-vni
+ exit-address-family
+!
+line vty
+!
+end

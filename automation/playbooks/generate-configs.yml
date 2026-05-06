@@ -1,0 +1,44 @@
+---
+- name: Generate FRR configurations from templates
+  hosts: spines,leaves
+  gather_facts: no
+  vars:
+    config_dir: "../../configs/{{ ansible_host }}"
+
+  tasks:
+    - name: Create config directory for each node
+      file:
+        path: "{{ config_dir }}"
+        state: directory
+        mode: '0755'
+      delegate_to: localhost
+
+    - name: Generate FRR config from template
+      template:
+        src: "{{ 'spine' if 'spines' in group_names else 'leaf' }}/frr.conf.j2"
+        dest: "{{ config_dir }}/frr.conf"
+      delegate_to: localhost
+
+    - name: Generate daemons file
+      template:
+        src: daemons.j2
+        dest: "{{ config_dir }}/daemons"
+      delegate_to: localhost
+
+    - name: Generate startup script for leaves
+      template:
+        src: leaf/startup.sh.j2
+        dest: "{{ config_dir }}/startup.sh"
+        mode: '0755'
+      delegate_to: localhost
+      when: "'leaves' in group_names"
+
+- name: Generate Containerlab topology
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Generate topology file
+      template:
+        src: clab/topology.yml.j2
+        dest: "../../evpn-lab.clab.yml"
+      delegate_to: localhost
