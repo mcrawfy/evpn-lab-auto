@@ -8,18 +8,18 @@ all:
     linux:
       hosts:
         clab-evpn-lab-auto-client1:
-          ansible_host: 172.20.20.5
-        clab-evpn-lab-auto-client2:
-          ansible_host: 172.20.20.3
-        clab-evpn-lab-auto-client3:
-          ansible_host: 172.20.20.4
-        clab-evpn-lab-auto-leaf1:
           ansible_host: 172.20.20.6
-        clab-evpn-lab-auto-leaf2:
+        clab-evpn-lab-auto-client2:
+          ansible_host: 172.20.20.4
+        clab-evpn-lab-auto-client3:
           ansible_host: 172.20.20.7
-        clab-evpn-lab-auto-leaf3:
-          ansible_host: 172.20.20.2
-        clab-evpn-lab-auto-spine1:
-          ansible_host: 172.20.20.9
-        clab-evpn-lab-auto-spine2:
+        clab-evpn-lab-auto-leaf1:
           ansible_host: 172.20.20.8
+        clab-evpn-lab-auto-leaf2:
+          ansible_host: 172.20.20.3
+        clab-evpn-lab-auto-leaf3:
+          ansible_host: 172.20.20.9
+        clab-evpn-lab-auto-spine1:
+          ansible_host: 172.20.20.2
+        clab-evpn-lab-auto-spine2:
+          ansible_host: 172.20.20.5
