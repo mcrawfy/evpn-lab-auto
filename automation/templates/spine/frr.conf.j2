@@ -1,0 +1,43 @@
+hostname {{ ansible_host }}
+!
+log stdout
+!
+{% for iface in interfaces %}
+interface {{ iface.name }}
+ ip address {{ iface.ip }}
+ ip ospf network point-to-point
+ ip ospf area 0.0.0.0
+!
+{% endfor %}
+interface lo
+ ip address {{ router_id }}/32
+ ip ospf area 0.0.0.0
+!
+router bgp {{ as_number }}
+ bgp router-id {{ router_id }}
+ no bgp ebgp-requires-policy
+ !
+{% for iface in interfaces %}
+ neighbor {{ iface.peer_ip }} remote-as {{ hostvars[iface.peer].as_number }}
+!
+{% endfor %}
+ address-family ipv4 unicast
+{% for iface in interfaces %}
+  neighbor {{ iface.peer_ip }} activate
+{% endfor %}
+ exit-address-family
+ !
+ address-family l2vpn evpn
+{% for iface in interfaces %}
+  neighbor {{ iface.peer_ip }} activate
+  neighbor {{ iface.peer_ip }} route-reflector-client
+{% endfor %}
+ exit-address-family
+!
+router ospf
+ ospf router-id {{ router_id }}
+ log-adjacency-changes
+!
+line vty
+!
+end

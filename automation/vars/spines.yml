@@ -1,0 +1,15 @@
+spines:
+  spine1:
+    hostname: spine1
+    router_id: 1.1.1.1
+    as_number: 65000
+    spine1_eth1_ip: 10.0.1.1/30
+    spine1_eth2_ip: 10.0.3.1/30
+    spine1_eth3_ip: 10.0.5.1/30
+  spine2:
+    hostname: spine2
+    router_id: 1.1.1.2
+    as_number: 65000
+    spine1_eth1_ip: 10.0.2.1/30
+    spine1_eth2_ip: 10.0.4.1/30
+    spine1_eth3_ip: 10.0.6.1/30

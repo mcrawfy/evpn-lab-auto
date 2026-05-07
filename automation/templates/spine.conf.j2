@@ -1,0 +1,19 @@
+hostname {{ hostname }}
+!
+log stdout
+!
+interface eth1
+ ip address {{ spine1_eth1_ip }}
+!
+interface eth2
+ ip address {{ spine1_eth2_ip }}
+!
+interface eth3
+ ip address {{ spine1_eth3_ip }}
+!
+interface lo
+ ip address {{ router_id }}/32
+!
+router bgp {{ as_number }}
+ bgp router-id {{ router_id }}
+!
